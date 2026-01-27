@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Press+Start+2P&display=swap');
+
+:root {
+  /* Corporate Memphis Color Palette */
+  --primary-coral: #FF6B6B;
+  --primary-peach: #FFA07A;
+  --primary-yellow: #FFE66D;
+  --primary-mint: #4ECDC4;
+  --primary-blue: #45B7D1;
+  --primary-purple: #A66CFF;
+  --primary-pink: #FF9ECD;
+  
+  --bg-cream: #FFF9F0;
+  --bg-light: #FAFAFA;
+  --text-dark: #2D3436;
+  --text-light: #636E72;
+  
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.12);
+  
+  /* Card and Surface Colors */
+  --card-bg: #FFFFFF;
+  --navbar-bg: rgba(255, 255, 255, 0.95);
+  --border-color: rgba(0, 0, 0, 0.08);
+}
+
+/* Dark Mode Variables */
+[data-theme="dark"] {
+  --bg-cream: #1A1A2E;
+  --bg-light: #16213E;
+  --text-dark: #EAEAEA;
+  --text-light: #B0B0B0;
+  --card-bg: #1F1F38;
+  --navbar-bg: rgba(26, 26, 46, 0.95);
+  --border-color: rgba(255, 255, 255, 0.1);
+  --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.3);
+  --shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.4);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Space Grotesk', sans-serif;
+  background: var(--bg-cream);
+  color: var(--text-dark);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+/* Arcade Text Effect Styles */
+.arcade-input {
+  font-family: 'Press Start 2P', cursive !important;
+  font-size: 12px !important;
+  letter-spacing: 1px;
+  caret-color: var(--primary-coral);
+  animation: caretBlink 0.5s step-end infinite;
+}
+
+.arcade-input:focus {
+  animation: arcadeGlow 0.3s ease-in-out;
+}
+
+@keyframes caretBlink {
+  50% {
+    caret-color: transparent;
+  }
+}
+
+@keyframes arcadeGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px var(--primary-coral), 0 0 10px var(--primary-yellow);
+  }
+  50% {
+    box-shadow: 0 0 20px var(--primary-coral), 0 0 40px var(--primary-yellow), 0 0 60px var(--primary-mint);
+  }
+}
+
+/* Arcade Boom Effect */
+.arcade-boom {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  animation: boomEffect 0.4s ease-out forwards;
+}
+
+@keyframes boomEffect {
+  0% {
+    transform: scale(0.5);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-coral);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-purple);
+}
+
+/* Global Animation Classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Card Hover Effects */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary-coral), var(--primary-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Button Styles */
+.btn-coral {
+  background: linear-gradient(135deg, var(--primary-coral), var(--primary-peach));
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-coral:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(255, 107, 107, 0.4);
+}
+
+.btn-mint {
+  background: linear-gradient(135deg, var(--primary-mint), var(--primary-blue));
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 12px 28px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-mint:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 20px rgba(78, 205, 196, 0.4);
+}
+
+/* Section Styling */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-coral), var(--primary-yellow));
+  border-radius: 2px;
+}
+
+/* Responsive Utilities */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Dark Mode Card Styles */
+[data-theme="dark"] .card,
+[data-theme="dark"] .modal-content {
+  background-color: var(--card-bg) !important;
+  border-color: var(--border-color) !important;
+  color: var(--text-dark);
+}
+
+[data-theme="dark"] .card-body,
+[data-theme="dark"] .card-header,
+[data-theme="dark"] .card-footer {
+  background-color: transparent !important;
+  color: var(--text-dark);
+}
+
+[data-theme="dark"] .form-control,
+[data-theme="dark"] .form-select {
+  background-color: var(--bg-light);
+  border-color: var(--border-color);
+  color: var(--text-dark);
+}
+
+[data-theme="dark"] .form-control:focus,
+[data-theme="dark"] .form-select:focus {
+  background-color: var(--bg-light);
+  border-color: var(--primary-purple);
+  color: var(--text-dark);
+}
+
+[data-theme="dark"] .text-muted {
+  color: var(--text-light) !important;
+}
+
+[data-theme="dark"] .btn-outline-dark {
+  color: var(--text-dark);
+  border-color: var(--text-light);
+}
+
+[data-theme="dark"] .btn-outline-dark:hover {
+  background-color: var(--text-dark);
+  color: var(--bg-cream);
+}
+
+[data-theme="dark"] .navbar-toggler {
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+[data-theme="dark"] .dropdown-menu {
+  background-color: var(--card-bg);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .dropdown-item {
+  color: var(--text-dark);
+}
+
+[data-theme="dark"] .dropdown-item:hover {
+  background-color: var(--bg-light);
+}
+
+/* Dark mode transitions */
+.card, .modal-content, .form-control, .form-select, .btn {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}

@@ -1,0 +1,553 @@
+/* App.css - Additional styles for Student Course Portal */
+
+/* ===== Loading Screen ===== */
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #A66CFF, #FF6B6B);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+/* ===== Smooth Scrolling ===== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== Page Sections ===== */
+section {
+  position: relative;
+}
+
+/* ===== Card Animations ===== */
+.course-card {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.course-card:hover {
+  transform: translateY(-10px);
+}
+
+.course-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: linear-gradient(135deg, rgba(166, 108, 255, 0.1), rgba(255, 107, 107, 0.1));
+  pointer-events: none;
+}
+
+.course-card:hover::before {
+  opacity: 1;
+}
+
+/* ===== Image Zoom Effect ===== */
+.image-zoom-container {
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.image-zoom-container img {
+  transition: transform 0.5s ease;
+}
+
+.image-zoom-container:hover img {
+  transform: scale(1.1);
+}
+
+/* ===== Gradient Text Animation ===== */
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animated-gradient-text {
+  background: linear-gradient(90deg, #FF6B6B, #A66CFF, #4ECDC4, #FF6B6B);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientShift 4s ease infinite;
+}
+
+/* ===== Floating Animation ===== */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+.floating {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ===== Pulse Animation ===== */
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+.pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* ===== Shine Effect ===== */
+@keyframes shine {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shine-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.shine-effect::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  background-size: 200% 100%;
+  animation: shine 3s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* ===== Button Styles ===== */
+.btn-gradient-primary {
+  background: #A66CFF;
+  border: none;
+  color: white;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-gradient-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(166, 108, 255, 0.4);
+  background: #9559E8;
+  color: white;
+}
+
+.btn-gradient-primary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.btn-gradient-primary:hover::before {
+  left: 100%;
+}
+
+.btn-gradient-secondary {
+  background: #4ECDC4;
+  border: none;
+  color: white;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.btn-gradient-secondary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(78, 205, 196, 0.4);
+  background: #3DBDB5;
+  color: white;
+}
+
+/* ===== Badge Styles ===== */
+.badge-gradient {
+  background: linear-gradient(135deg, #FFE66D, #FFA07A);
+  color: #2D3436;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+/* ===== Progress Bar Custom ===== */
+.progress-custom {
+  height: 8px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.progress-custom .progress-bar {
+  background: linear-gradient(90deg, #4ECDC4, #45B7D1);
+  border-radius: 10px;
+  transition: width 0.5s ease;
+}
+
+/* ===== Stats Card ===== */
+.stats-card {
+  background: white;
+  border-radius: 20px;
+  padding: 25px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.stats-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+.stats-card .icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.stats-card .value {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.stats-card .label {
+  color: #636E72;
+  font-size: 0.9rem;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 2.5rem !important;
+  }
+  
+  .section-title {
+    font-size: 2rem !important;
+  }
+  
+  .stats-card .value {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem !important;
+  }
+  
+  .section-title {
+    font-size: 1.75rem !important;
+  }
+  
+  .floating-doodle {
+    display: none;
+  }
+  
+  .nav-logo-text {
+    font-size: 1.2rem !important;
+  }
+  
+  .hero-stats {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .mobile-hidden {
+    display: none !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 1.75rem !important;
+  }
+  
+  section {
+    padding: 50px 0 !important;
+  }
+  
+  .card-body {
+    padding: 20px !important;
+  }
+}
+
+/* ===== Category Chip Styles ===== */
+.category-chip {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  user-select: none;
+}
+
+.category-chip:hover {
+  transform: scale(1.05);
+}
+
+.category-chip.active {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Modal Styles ===== */
+.modal-backdrop {
+  backdrop-filter: blur(5px);
+}
+
+/* ===== Tooltip Styles ===== */
+.custom-tooltip {
+  background: rgba(45, 52, 54, 0.95) !important;
+  border-radius: 10px !important;
+  padding: 10px 15px !important;
+  font-weight: 500 !important;
+}
+
+/* ===== Skeleton Loading ===== */
+@keyframes skeleton {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    #f0f0f0 25%,
+    #e0e0e0 50%,
+    #f0f0f0 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton 1.5s ease-in-out infinite;
+  border-radius: 10px;
+}
+
+/* ===== Form Styles ===== */
+.form-floating > label {
+  font-weight: 500;
+  color: #636E72;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #A66CFF;
+  box-shadow: 0 0 0 0.25rem rgba(166, 108, 255, 0.25);
+}
+
+/* ===== Rating Stars ===== */
+.rating-star {
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.rating-star:hover {
+  transform: scale(1.2);
+}
+
+/* ===== Notification Badge ===== */
+.notification-badge {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 20px;
+  height: 20px;
+  background: #FF6B6B;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+/* ===== Confetti Animation ===== */
+@keyframes confetti-fall {
+  0% {
+    transform: translateY(-100vh) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+.confetti {
+  animation: confetti-fall 3s ease-in-out forwards;
+}
+
+/* ===== Custom Selection ===== */
+::selection {
+  background: rgba(166, 108, 255, 0.3);
+  color: #2D3436;
+}
+
+/* ===== Link Styles ===== */
+a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+/* ===== List Styles ===== */
+.feature-list {
+  list-style: none;
+  padding: 0;
+}
+
+.feature-list li {
+  padding: 10px 0;
+  padding-left: 30px;
+  position: relative;
+}
+
+.feature-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #4ECDC4;
+  font-weight: 700;
+}
+
+/* ===== Divider ===== */
+.divider {
+  height: 4px;
+  width: 60px;
+  background: linear-gradient(90deg, #FF6B6B, #A66CFF);
+  border-radius: 2px;
+  margin: 20px auto;
+}
+
+/* ===== Card Hover Glow ===== */
+.glow-card {
+  position: relative;
+}
+
+.glow-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  box-shadow: 0 0 30px rgba(166, 108, 255, 0.5);
+  pointer-events: none;
+}
+
+.glow-card:hover::after {
+  opacity: 1;
+}
+
+/* ===== Typography ===== */
+.text-gradient {
+  background: linear-gradient(135deg, #FF6B6B, #A66CFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-muted-custom {
+  color: #636E72 !important;
+}
+
+/* ===== Transitions ===== */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ===== Print Styles ===== */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+/* ===== Dark Mode Specific Styles ===== */
+[data-theme="dark"] .stats-card {
+  background: #1F1F38;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .stats-card .label {
+  color: #B0B0B0;
+}
+
+[data-theme="dark"] .course-card::before {
+  background: linear-gradient(135deg, rgba(166, 108, 255, 0.2), rgba(255, 107, 107, 0.2));
+}
+
+[data-theme="dark"] .skeleton {
+  background: linear-gradient(
+    90deg,
+    #2D2D4A 25%,
+    #3D3D5A 50%,
+    #2D2D4A 75%
+  );
+}
+
+[data-theme="dark"] .text-muted-custom {
+  color: #B0B0B0 !important;
+}
+
+[data-theme="dark"] .divider {
+  background: linear-gradient(90deg, #A66CFF, #FF6B6B);
+}
+
+[data-theme="dark"] ::selection {
+  background: rgba(166, 108, 255, 0.5);
+  color: #FFFFFF;
+}
