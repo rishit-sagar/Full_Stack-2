@@ -7,22 +7,28 @@ A modern, responsive web application for students to browse, enroll, and manage 
 ## 📸 Screenshots
 
 ### 🏠 Home Page / Hero Section
-![Hero Section](screenshots/hero-section.png)
+![Hero Section](<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/65819362-1a58-4e35-ba25-25ca406f43e9" />
+)
 
 ### 📚 Course Listing
-![Course List](screenshots/course-list.png)
+![Course List](<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/06694052-72d8-48f5-8042-e26d7ebc30cb" />
+)
 
 ### 📋 Enrolled Courses
-![Enrolled Courses](screenshots/enrolled-courses.png)
+![Enrolled Courses](<img width="1918" height="976" alt="image" src="https://github.com/user-attachments/assets/2919bf7d-4473-4590-99ed-21860c431775" />
+)
 
 ### 💬 Feedback Section
-![Feedback Section](screenshots/feedback-section.png)
+![Feedback Section](<img width="1919" height="1075" alt="image" src="https://github.com/user-attachments/assets/3ad43f73-4395-4a46-a518-1a38e428b4f2" />
+)
 
 ### 🌙 Dark Mode
-![Dark Mode](screenshots/dark-mode.png)
+![Dark Mode](<img width="1916" height="1078" alt="image" src="https://github.com/user-attachments/assets/90ae2885-5073-40f0-bade-6708d13036c3" />
+)
 
 ### 🔐 Authentication Modal
-![Auth Modal](screenshots/auth-modal.png)
+![Auth Modal](<img width="1919" height="1079" alt="image" src="https://github.com/user-attachments/assets/00518902-a73d-4513-a67c-da14428aeb6f" />
+)
 
 ---
 
