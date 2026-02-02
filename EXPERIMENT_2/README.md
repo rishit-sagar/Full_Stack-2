@@ -10,6 +10,5 @@ Component showcases mixing React with popular UI frameworks.
 ) |
 | [2.3Nav_bar](2.3Nav_bar) | Responsive navbar with collapse and search. | React, Vite, Node.js tooling, Bootstrap | ![Navbar view](<img width="1915" height="1067" alt="image" src="https://github.com/user-attachments/assets/c3458a8a-40f9-4102-ae85-92683e19ae59" />
 ) |
-| [Material-UI](Material-UI) | Material UI card, input, and button demo. | React, Vite, Node.js tooling, Material UI | ![Material UI demo](Material-UI/screenshots/mui-demo.png) |
 
 > Save the UI captures at the listed paths to enable the previews.
