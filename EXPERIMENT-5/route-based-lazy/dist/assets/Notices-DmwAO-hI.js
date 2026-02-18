@@ -1,0 +1,1 @@
+import{j as e}from"./index-hBimgx98.js";function o(){return e.jsxs("section",{children:[e.jsx("h2",{children:"Notices"}),e.jsx("p",{children:"Workshops and deadlines appear here once you open this route."})]})}export{o as default};

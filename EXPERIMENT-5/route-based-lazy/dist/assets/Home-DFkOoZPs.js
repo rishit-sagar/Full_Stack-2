@@ -1,0 +1,1 @@
+import{j as o}from"./index-hBimgx98.js";function e(){return o.jsxs("section",{children:[o.jsx("h1",{children:"Campus Dashboard"}),o.jsx("p",{children:"Choose a section to load its content on demand."})]})}export{e as default};

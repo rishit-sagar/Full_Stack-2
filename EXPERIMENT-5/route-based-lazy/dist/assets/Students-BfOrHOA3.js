@@ -1,0 +1,1 @@
+import{j as n}from"./index-hBimgx98.js";function i(){return n.jsxs("section",{children:[n.jsx("h2",{children:"Students"}),n.jsxs("ul",{children:[n.jsx("li",{children:"Ria"}),n.jsx("li",{children:"Arjun"}),n.jsx("li",{children:"Sana"})]})]})}export{i as default};
