@@ -15,8 +15,13 @@ To implement lazy loading techniques in a Single Page Application to improve per
 
 ### Experiment 1 – Component-Based Lazy Loading
 
-![Lazy Loading Output](screenshots/lazy-loading.png)
+![Lazy Loading Output] <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/b309d395-47d1-4153-9f7f-2be9ab9433e2" />
+
+<img width="1919" height="1015" alt="image" src="https://github.com/user-attachments/assets/c7c96693-f9a6-414b-9890-40564254354f" />
+
 
 ### Experiment 2 – Route-Based Lazy Loading
 
-![Route Based Lazy Loading Output](screenshots/route-based-lazy.png)
+![Route Based Lazy Loading Output]<img width="1171" height="571" alt="image" src="https://github.com/user-attachments/assets/cc1ae003-c7e0-498f-9192-c95e9ed2388d" />
+<img width="1918" height="927" alt="image" src="https://github.com/user-attachments/assets/065a2817-73a5-4a97-bf43-1778845c036a" />
+
