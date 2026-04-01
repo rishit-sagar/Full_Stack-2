@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+/* ---------- Global Reset ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Page Background ---------- */
+body {
+  font-family: "Audiowide", sans-serif;
+  background: #dff5e4;
+}
+
+/* ---------- Layout ---------- */
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;              /* side-by-side spacing */
+  padding: 60px 40px;
+  flex-wrap: wrap;        /* responsive stacking */
+}
+
+/* ---------- Animation ---------- */
+@keyframes slideFadeBounce {
+  0% {
+    opacity: 0;
+    transform: translateX(40px) scale(0.95);
+  }
+  70% {
+    transform: translateX(-5px) scale(1.02);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+/* ---------- Cards ---------- */
+.app-card,
+.output-card {
+  width: 700px;
+  max-width: 95%;
+  padding: 60px;
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.6);
+
+  box-shadow:
+    0 35px 70px rgba(34, 197, 94, 0.15);
+
+  transition: all 0.4s ease;
+}
+
+/* Only animate output card */
+.output-card {
+  animation: slideFadeBounce 0.7s ease forwards;
+}
+
+/* ---------- Success Glow ---------- */
+.success-glow {
+  border: 2px solid #22c55e;
+  box-shadow:
+    0 0 25px rgba(34, 197, 94, 0.6),
+    0 0 60px rgba(34, 197, 94, 0.3);
+}
+
+/* ---------- Typography ---------- */
+.app-title {
+  margin-bottom: 16px;
+  font-size: 2rem;
+  text-align: center;
+  color: #065f46;
+}
+
+.app-desc {
+  margin-bottom: 28px;
+  text-align: center;
+  font-size: 1rem;
+  color: #047857;
+  line-height: 1.6;
+}
+
+/* ---------- Form ---------- */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+label {
+  font-size: 0.9rem;
+  color: #065f46;
+}
+
+/* ---------- Inputs ---------- */
+.input,
+.textarea {
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid #bbf7d0;
+  font-size: 1rem;
+  background: #f0fdf4;
+  transition: all 0.2s ease;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #22c55e;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.20);
+}
+
+/* ---------- Oval Submit Button ---------- */
+.btn-submit {
+  margin-top: 20px;
+  padding: 14px 50px;
+  border-radius: 999px;   /* perfect oval */
+  border: none;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(34, 197, 94, 0.35);
+}
+
+.btn-submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(34, 197, 94, 0.45);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+/* ---------- Confetti ---------- */
+.confetti-container {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.confetti-container::before,
+.confetti-container::after {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background-image: radial-gradient(#22c55e 3px, transparent 3px);
+  background-size: 40px 40px;
+  animation: confettiFall 1.5s linear forwards;
+  opacity: 0.8;
+}
+
+@keyframes confettiFall {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}

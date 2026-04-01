@@ -1,0 +1,192 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+/* ---------- Global Reset ---------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Page Background ---------- */
+body {
+  font-family: "Audiowide", sans-serif;
+  background: #d8d1c6;
+}
+
+/* ---------- Root Layout ---------- */
+.app-root {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* ---------- Main Card ---------- */
+.app-card {
+  position: relative;
+  overflow: hidden;
+
+  width: 750px;
+  max-width: 95%;
+
+  padding: 70px 80px;
+  border-radius: 32px;
+
+  background: #ffffff; /* Brighter white */
+  border: 1px solid #f0e2cf;
+
+  box-shadow:
+    0 30px 70px rgba(150, 110, 70, 0.20),
+    0 10px 25px rgba(0, 0, 0, 0.08);
+
+  transition: all 0.3s ease;
+}
+
+/* Soft light overlay for premium look */
+.app-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 32px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.6),
+    rgba(255, 255, 255, 0.05)
+  );
+  pointer-events: none;
+}
+
+/* Hover lift effect */
+.app-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 40px 80px rgba(150, 110, 70, 0.25),
+    0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Typography ---------- */
+.app-title {
+  margin-bottom: 16px;
+  font-size: 2.2rem;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.5px;
+  color: #4a3427;
+}
+
+.app-desc {
+  margin-bottom: 35px;
+  text-align: center;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #7a5c47;
+}
+
+/* ---------- Form Layout ---------- */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: #6b4e3d;
+}
+
+/* ---------- Inputs ---------- */
+.input,
+.textarea {
+  padding: 16px 18px;
+  border-radius: 16px;
+  border: 1px solid #eadcc9;
+  font-size: 1.05rem;
+  background: #fffdf9;
+  color: #3e2f26;
+  transition: all 0.25s ease;
+}
+
+.input:focus,
+.textarea:focus {
+  outline: none;
+  border-color: #c89b6d;
+  box-shadow: 0 0 0 4px rgba(200, 155, 109, 0.2);
+  background: #ffffff;
+}
+
+/* ---------- Submit Button ---------- */
+.btn-submit {
+  margin-top: 10px;
+  padding: 16px 30px;
+  border-radius: 50px;
+  border: none;
+
+  background: #b5875a;
+  color: white;
+
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+  transition: all 0.25s ease;
+}
+
+.btn-submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(164, 113, 72, 0.35);
+}
+
+.btn-submit:active {
+  transform: translateY(0);
+}
+
+/* ---------- Output Section ---------- */
+.output {
+  margin-top: 35px;
+  padding-top: 20px;
+  border-top: 1px solid #eadcc9;
+  font-size: 1rem;
+  color: #4a3427;
+}
+
+/* ---------- Status Messages ---------- */
+.error-text {
+  color: #b44a3f;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.success-text {
+  margin-top: 15px;
+  color: #6f8a57;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* ---------- Responsive Adjustment ---------- */
+@media (max-width: 600px) {
+  .app-card {
+    padding: 40px 30px;
+  }
+
+  .app-title {
+    font-size: 1.8rem;
+  }
+
+  .input,
+  .textarea {
+    font-size: 1rem;
+  }
+}
