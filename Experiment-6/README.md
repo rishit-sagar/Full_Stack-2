@@ -1,6 +1,8 @@
 ### Form handling using react
-<img width="1679" height="753" alt="Screenshot 2026-03-04 000455" src="https://github.com/user-attachments/assets/4e2d569e-0c35-4d3c-9688-9b3a5f1a99cc" />
-<img width="876" height="611" alt="image" src="https://github.com/user-attachments/assets/988e0b15-8eb3-4930-b68f-0722fbe1c718" />
+<img width="1679" height="753" alt=<img width="1919" height="926" alt="image" src="https://github.com/user-attachments/assets/4ca06e0f-5d0b-4806-aa96-434cf30e49aa" />
+ />
+<img width="876" height="611" alt="image" src=<img width="960" height="800" alt="image" src="https://github.com/user-attachments/assets/900378cf-caeb-4888-b868-f6786b7966df" />
+ />
 
 
 
